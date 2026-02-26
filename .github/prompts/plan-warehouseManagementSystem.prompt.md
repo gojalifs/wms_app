@@ -18,6 +18,8 @@ This plan scaffolds a complete Warehouse Management System on the existing Larav
 
 6. **Build Reports module** — create a `ReportController` with views for: stock summary, intake history, outgoing history, and low-stock alerts; all filterable by date range and material; add optional PDF/Excel export via `barryvdh/laravel-dompdf` or `maatwebsite/excel`.
 
+7. **Build Dashboard and Profile** — create a simple dashboard view showing key metrics (total materials, low stock count, recent transactions) and a profile edit page for users to update their name/email/password.
+
 ---
 
 ## Database Schema
