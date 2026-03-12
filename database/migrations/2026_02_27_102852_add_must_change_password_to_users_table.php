@@ -11,15 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('outgoing_orders', function (Blueprint $table) {
-            $table->renameColumn('destination', 'department');
+        Schema::table('users', function (Blueprint $table) {
+            $table->boolean('must_change_password')->default(false)->after('remember_token');
         });
     }
 
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
-        Schema::table('outgoing_orders', function (Blueprint $table) {
-            $table->renameColumn('department', 'destination');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('must_change_password');
         });
     }
 };

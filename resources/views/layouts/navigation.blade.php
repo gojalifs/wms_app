@@ -31,6 +31,12 @@
                         <x-nav-link :href="route('categories.index')" :active="request()->routeIs('categories.*')">
                             {{ __('wms.nav.categories') }}
                         </x-nav-link>
+                        <x-nav-link :href="route('reports.index')" :active="request()->routeIs('reports.*')">
+                            {{ __('wms.nav.reports') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('users.index')" :active="request()->routeIs('users.*')">
+                            {{ __('wms.nav.users') }}
+                        </x-nav-link>
                     @endif
                 </div>
             </div>
@@ -102,6 +108,12 @@
             @if (auth()->user()->isAdmin())
                 <x-responsive-nav-link :href="route('categories.index')" :active="request()->routeIs('categories.*')">
                     {{ __('wms.nav.categories') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('reports.index')" :active="request()->routeIs('reports.*')">
+                    {{ __('wms.nav.reports') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('users.index')" :active="request()->routeIs('users.*')">
+                    {{ __('wms.nav.users') }}
                 </x-responsive-nav-link>
             @endif
         </div>

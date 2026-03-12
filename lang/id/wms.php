@@ -14,6 +14,8 @@ return [
         'intake'     => 'Penerimaan',
         'outgoing'   => 'Pengeluaran',
         'categories' => 'Kategori',
+        'reports'    => 'Laporan',
+        'users'      => 'Pengguna',
         'profile'    => 'Profil',
         'logout'     => 'Keluar',
     ],
@@ -257,6 +259,74 @@ return [
         'error_stock'        => 'Stok tidak mencukupi untuk material yang dipilih.',
         'error_create'       => 'Gagal menyimpan pengeluaran: :message',
         'back'               => '← Kembali ke Pengeluaran',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Laporan
+    |--------------------------------------------------------------------------
+    */
+    'reports' => [
+        'title'                   => 'Laporan',
+        'intake_title'            => 'Laporan Penerimaan Material',
+        'outgoing_title'          => 'Laporan Pengeluaran Material',
+        'inventory_title'         => 'Laporan Inventaris',
+        'date_from'               => 'Tanggal Dari',
+        'date_to'                 => 'Tanggal Sampai',
+        'supplier_filter'         => 'Pemasok (opsional)',
+        'department_filter'       => 'Departemen (opsional)',
+        'category_filter'         => 'Kategori (opsional)',
+        'low_stock_only'          => 'Hanya stok rendah',
+        'export_excel'            => 'Ekspor Excel',
+        'select_category'         => '-- Semua Kategori --',
+        'intake_desc'             => 'Ekspor data penerimaan material berdasarkan rentang tanggal dan pemasok.',
+        'outgoing_desc'           => 'Ekspor data pengeluaran material berdasarkan rentang tanggal dan departemen.',
+        'inventory_desc'          => 'Ekspor data stok inventaris saat ini beserta status stok rendah.',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Manajemen Pengguna
+    |--------------------------------------------------------------------------
+    */
+    'users' => [
+        'title'                    => 'Manajemen Pengguna',
+        'add'                      => '+ Tambah Pengguna',
+        'create'                   => 'Tambah Pengguna',
+        'name'                     => 'Nama',
+        'email'                    => 'Email',
+        'role'                     => 'Peran',
+        'status'                   => 'Status',
+        'you'                      => 'Anda',
+        'no_data'                  => 'Belum ada pengguna.',
+        'select_role'              => '-- Pilih Peran --',
+        'role_admin'               => 'Admin',
+        'role_user'                => 'User',
+        'must_change_password'     => '⚠ Harus ganti kata sandi',
+        'confirm_delete'           => 'Hapus pengguna ini?',
+        'created'                  => 'Pengguna berhasil ditambahkan.',
+        'deleted'                  => 'Pengguna berhasil dihapus.',
+        'cannot_delete_self'       => 'Tidak dapat menghapus akun Anda sendiri.',
+        'temp_password_info'       => 'Password sementara akan dibuat otomatis. Pengguna harus mengganti password saat pertama kali login.',
+        'temp_password_notice_title' => 'Password sementara untuk pengguna baru:',
+        'temp_password_notice'     => 'Nama: :name — Password: :password',
+        'temp_password_warning'    => 'Catat password ini sekarang, karena tidak akan ditampilkan lagi.',
+        'error_create'             => 'Gagal menambahkan pengguna: :message',
+        'error_delete'             => 'Gagal menghapus pengguna: :message',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Ganti Kata Sandi (Paksa)
+    |--------------------------------------------------------------------------
+    */
+    'change_password' => [
+        'title'            => 'Ganti Kata Sandi',
+        'notice'           => 'Anda harus mengganti kata sandi sebelum dapat melanjutkan menggunakan aplikasi.',
+        'new_password'     => 'Kata Sandi Baru',
+        'confirm_password' => 'Konfirmasi Kata Sandi Baru',
+        'submit'           => 'Simpan Kata Sandi',
+        'updated'          => 'Kata sandi berhasil diperbarui.',
     ],
 
 ];
