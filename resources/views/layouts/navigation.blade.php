@@ -1,4 +1,54 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="border-b border-gray-100 relative overflow-hidden" style="background: linear-gradient(135deg, #92f7f6 0%, #a3f0dc 40%, #a3f0dc 70%, #f5f3ff 100%);">
+    <!-- Decorative Background Ornaments -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+        <!-- Large soft circle - top left -->
+        <svg class="absolute -top-10 -left-10 w-40 h-40 opacity-[0.12]" viewBox="0 0 160 160" fill="none">
+            <circle cx="80" cy="80" r="80" fill="url(#grad1)"/>
+            <defs>
+                <radialGradient id="grad1" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#6366f1"/>
+                    <stop offset="100%" stop-color="#818cf8" stop-opacity="0"/>
+                </radialGradient>
+            </defs>
+        </svg>
+        <!-- Medium circle - top right area -->
+        <svg class="absolute -top-6 right-20 w-28 h-28 opacity-[0.10]" viewBox="0 0 112 112" fill="none">
+            <circle cx="56" cy="56" r="56" fill="url(#grad2)"/>
+            <defs>
+                <radialGradient id="grad2" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#0ea5e9"/>
+                    <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+                </radialGradient>
+            </defs>
+        </svg>
+        <!-- Small accent circle - center right -->
+        <svg class="absolute top-2 right-1/3 w-16 h-16 opacity-[0.08]" viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="32" fill="#a78bfa"/>
+        </svg>
+        <!-- Tiny dot cluster - left area -->
+        <svg class="absolute bottom-1 left-1/4 w-24 h-12 opacity-[0.07]" viewBox="0 0 96 48" fill="none">
+            <circle cx="12" cy="24" r="6" fill="#6366f1"/>
+            <circle cx="36" cy="16" r="4" fill="#818cf8"/>
+            <circle cx="56" cy="30" r="5" fill="#a78bfa"/>
+            <circle cx="78" cy="20" r="3" fill="#c4b5fd"/>
+        </svg>
+        <!-- Abstract wavy line accent -->
+        <svg class="absolute top-1/2 -translate-y-1/2 left-0 w-full h-8 opacity-[0.04]" viewBox="0 0 1200 32" fill="none" preserveAspectRatio="none">
+            <path d="M0 16C100 4 200 28 300 16C400 4 500 28 600 16C700 4 800 28 900 16C1000 4 1100 28 1200 16" stroke="#6366f1" stroke-width="2" fill="none"/>
+            <path d="M0 20C100 8 200 32 300 20C400 8 500 32 600 20C700 8 800 32 900 20C1000 8 1100 32 1200 20" stroke="#0ea5e9" stroke-width="1.5" fill="none"/>
+        </svg>
+        <!-- Soft blob - bottom right -->
+        <svg class="absolute -bottom-8 -right-6 w-32 h-32 opacity-[0.09]" viewBox="0 0 128 128" fill="none">
+            <ellipse cx="64" cy="64" rx="60" ry="50" transform="rotate(-15 64 64)" fill="url(#grad3)"/>
+            <defs>
+                <radialGradient id="grad3" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#8b5cf6"/>
+                    <stop offset="100%" stop-color="#c4b5fd" stop-opacity="0"/>
+                </radialGradient>
+            </defs>
+        </svg>
+    </div>
+
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -45,7 +95,7 @@
             <div class="hidden sm:flex sm:items-center sm:ms-6">
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
-                        <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                        <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white/70 backdrop-blur-sm hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
                             <div>{{ Auth::user()->name }}</div>
 
                             <div class="ms-1">
