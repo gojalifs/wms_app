@@ -2,10 +2,6 @@
     <x-slot name="header">
         <div class="flex items-center justify-between">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">{{ __('wms.intake.title') }}</h2>
-            <a href="{{ route('intake.create') }}"
-                class="inline-flex items-center px-4 py-2 bg-gray-800 text-white text-sm font-medium rounded-md hover:bg-gray-700">
-                {{ __('wms.intake.new') }}
-            </a>
         </div>
     </x-slot>
 
@@ -35,13 +31,17 @@
                     <thead class="bg-gray-50">
                         <tr>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                                {{ __('wms.intake.reference_no') }}</th>
+                                {{ __('wms.intake.reference_no') }}
+                            </th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                                {{ __('wms.intake.supplier') }}</th>
+                                {{ __('wms.intake.supplier') }}
+                            </th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                                {{ __('wms.intake.received_at') }}</th>
+                                {{ __('wms.intake.received_at') }}
+                            </th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                                {{ __('wms.general.created_by') }}</th>
+                                {{ __('wms.general.created_by') }}
+                            </th>
                             <th class="px-6 py-3"></th>
                         </tr>
                     </thead>
@@ -66,6 +66,10 @@
                     </tbody>
                 </table>
                 <div class="px-6 py-4">{{ $orders->links() }}</div>
+                <a href="{{ route('intake.create') }}"
+                    class="inline-flex items-center ml-4 mb-4 px-4 py-2 bg-gray-800 text-white text-sm font-medium rounded-md hover:bg-gray-700">
+                    {{ __('wms.intake.new') }}
+                </a>
             </div>
         </div>
     </div>
